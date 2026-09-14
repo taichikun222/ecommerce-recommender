@@ -62,4 +62,10 @@ ecommerce-recommender/
 1. Create a virtual environment: `python -m venv venv`
 2. Activate it: `source venv/bin/activate` (Mac/Linux) or `venv\Scripts\activate` (Windows)
 3. Install dependencies: `pip install -r requirements.txt`
-4. Open `notebooks/01_eda_and_recommender.ipynb` in VSCode and run the cells top to bottom.
+4. Open `notebooks/01_eda_and_recommender.ipynb` in VSCode and run the cells top to bottom (this also regenerates the `models/` artifacts the demo app below reads).
+
+## Local Demo App (optional, Step 8)
+A small Flask app to try the recommender interactively:
+1. Run the notebook once first, so `models/item_similarity_cf.pkl` exists.
+2. Double-click `open for step 8.bat` (Windows) - or run `python app.py` manually.
+3. Open `http://127.0.0.1:5000` in your browser, enter a user ID (1-3000), and see their top 5 recommendations with an explanation of which past purchase drove each one.
